@@ -2,7 +2,7 @@
 
 Stats collection and reporting micro-framework. It provides API and barebone for applications than run some code, collect stats and report.
 
-## Requremets
+## Requirements
 
 - [Boost](http://www.boost.org/) for programm options parsing and JSON-serialization
 - [YAML-cpp](https://github.com/jbeder/yaml-cpp/) for YAML configuration parsing
