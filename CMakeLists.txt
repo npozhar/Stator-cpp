@@ -54,6 +54,10 @@ IF(YAMLCPP_LIBRARY)
 ENDIF()
 
 
+TARGET_LINK_LIBRARIES(stator
+                      ${USED_LIBS})
+
+
 # Expose includes to other subprojects through cache variable.
 SET(${PROJECT_NAME}_INCLUDE_DIRS
     ${PROJECT_SOURCE_DIR}/include
