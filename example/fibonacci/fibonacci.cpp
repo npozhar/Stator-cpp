@@ -1,4 +1,6 @@
 
+#include <chrono>
+
 #include "stator/engine.hpp"
 #include "stator/config.hpp"
 
