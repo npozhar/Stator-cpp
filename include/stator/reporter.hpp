@@ -49,7 +49,9 @@ public:
         struct DoubleVisitor : public boost::static_visitor<double>
         {
             template <typename ValueT>
-            double operator()(ValueT value) const { return value; }
+            double operator()(ValueT value) const {
+                return static_cast<double>(value);
+            }
             double operator()(const std::string& /* value */) const {
                 throw std::logic_error("Can't convert string to double");
             }
@@ -70,7 +72,7 @@ public:
                     for (size_t i = 1; i < values.size(); ++i) {
                         sum_values += boost::apply_visitor(doubleVisitor, values[i]);
                     }
-                    return sum_values / values.size();
+                    return sum_values / static_cast<double>(values.size());
                 }
             }
         }
